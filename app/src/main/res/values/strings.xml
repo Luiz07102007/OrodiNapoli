@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">OrodiNapoli</string>
+    <string name="bemvindo">Bem-vindo à <font color="#1F750A">Oro de Napoli</font>: A Autêntica Experiência <font color="#AA2C19">Napolitana</font> no Coração do Brasil!</string>
+    <string name="btentrar">Já tem uma conta?<b>Entrar</b></string>
+    <string name="btcadastrar">É sua primeira vez?<b>Cadastre-se</b></string>
+    <string name="entrartv"><font color="#AA2C19">Entrar</font> com uma <font color="#1F750A">conta</font></string>
+    <string name="emailinput">Ex:123@gmail.com</string>
+    <string name="senhainput">Insira sua senha aqui</string>
+    <string name="btentrar2">Entrar</string>
+    <string name="loginentrar2">Seu <font color="#1F750A">Login</font> foi realizado com <font color="#AA2C19">sucesso</font>!</string>
+    <string name="logintoinicio">Ir para a tela inicial</string>
+    <string name="cadastratv"><font color="#1F750A">Cadastrar</font> uma nova <font color="#AA2C19">conta</font></string>
+    <string name="cadastratoinicio">Seu <font color="#AA2C19">cadastro</font> foi realizado com <font color="#1F750A">sucesso</font>!</string>
+    <string name="btcadastrar2">Cadastrar</string>
+
+</resources>
