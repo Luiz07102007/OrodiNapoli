@@ -9,8 +9,9 @@
 
     <LinearLayout
         android:id="@+id/toplogin1"
-        android:layout_width="423dp"
-        android:layout_height="91dp"
+        android:layout_width="417dp"
+        android:layout_height="324dp"
+        android:background="#AA2C19"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,10 +19,116 @@
 
         <ImageView
             android:id="@+id/logologin1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="122dp"
+            android:layout_height="95dp"
             android:layout_gravity="center"
             android:background="#AA2C19"
             android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="321dp"
+            android:layout_height="176dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="50dp"
+            android:fontFamily="@font/playfair_variable"
+            android:text="@string/bemvindotv"
+            android:textColor="#FFFFFF"
+            android:textColorLink="#F4F4F4"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/promotv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/playfair_variable"
+        android:text="@string/promotv"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toplogin1" />
+
+    <ScrollView
+        android:id="@+id/inicial"
+        android:layout_width="409dp"
+        android:layout_height="393dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/promotv">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/margherita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/marguerita" />
+
+            <ImageView
+                android:id="@+id/pepperoni"
+                android:layout_width="match_parent"
+                android:layout_height="273dp"
+                android:layout_marginBottom="40dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/pepperoni" />
+
+            <ImageView
+                android:id="@+id/champignon"
+                android:layout_width="match_parent"
+                android:layout_height="274dp"
+                android:layout_marginBottom="40dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/champignon" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="423dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="1dp"
+        android:background="#CCD0CB"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inicial">
+
+        <ImageView
+            android:id="@+id/btcardapio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/btcardapio" />
+
+        <ImageView
+            android:id="@+id/bthome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/bthome" />
+
+        <ImageView
+            android:id="@+id/btconfig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/btperfil" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

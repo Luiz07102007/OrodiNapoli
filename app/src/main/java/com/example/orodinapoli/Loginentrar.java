@@ -19,6 +19,9 @@ public class Loginentrar extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_loginentrar);
         Button button = findViewById(R.id.btcadastrar);
+        View decorView = getWindow().getDecorView();
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
+        decorView.setSystemUiVisibility(uiOptions);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

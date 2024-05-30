@@ -3,6 +3,7 @@ package com.example.orodinapoli;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 import android.widget.VideoView;
 import android.net.Uri;
 import androidx.activity.EdgeToEdge;
@@ -18,6 +19,9 @@ public class SplashScreen2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_splash_screen2);
+        View decorView = getWindow().getDecorView();
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
+        decorView.setSystemUiVisibility(uiOptions);
         VideoView videoView = findViewById(R.id.videopizza);
         Uri videoUri= Uri.parse("android.resource://" +
                 getPackageName() + "/" +
