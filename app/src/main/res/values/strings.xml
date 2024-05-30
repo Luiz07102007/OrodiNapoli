@@ -12,5 +12,7 @@
     <string name="cadastratv"><font color="#1F750A">Cadastrar</font> uma nova <font color="#AA2C19">conta</font></string>
     <string name="cadastratoinicio">Seu <font color="#AA2C19">cadastro</font> foi realizado com <font color="#1F750A">sucesso</font>!</string>
     <string name="btcadastrar2">Cadastrar</string>
+    <string name="bemvindotv"><b>Bem vindo(a)  a Oro di Napoli onde a tradição e inovação se encontram</b></string>
+    <string name="promotv"><font color="#1F750A">Promoções</font> do chef</string>
 
 </resources>
