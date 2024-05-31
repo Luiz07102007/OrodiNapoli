@@ -13,6 +13,9 @@
         android:theme="@style/Theme.OrodiNapoli"
         tools:targetApi="31">
         <activity
+            android:name=".cardapio"
+            android:exported="false" />
+        <activity
             android:name=".Logincadastra2"
             android:exported="false" />
         <activity
