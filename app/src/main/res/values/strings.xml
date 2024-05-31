@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">OrodiNapoli</string>
     <string name="bemvindo">Bem-vindo à <font color="#1F750A">Oro de Napoli</font>: A Autêntica Experiência <font color="#AA2C19">Napolitana</font> no Coração do Brasil!</string>
-    <string name="btentrar">Já tem uma conta?<b>Entrar</b></string>
+    <string name="btentrar">Já tem uma conta? <b>Entrar</b></string>
     <string name="btcadastrar">É sua primeira vez?<b>Cadastre-se</b></string>
     <string name="entrartv"><font color="#AA2C19">Entrar</font> com uma <font color="#1F750A">conta</font></string>
     <string name="emailinput">Ex:123@gmail.com</string>
@@ -14,5 +14,5 @@
     <string name="btcadastrar2">Cadastrar</string>
     <string name="bemvindotv"><b>Bem vindo(a)  a Oro di Napoli onde a tradição e inovação se encontram</b></string>
     <string name="promotv"><font color="#1F750A">Promoções</font> do chef</string>
-
+    <string name="cardapiotv"> <b>Confira nosso saboroso cardápio que atendem os mais diversos gostos!</b></string>
 </resources>
