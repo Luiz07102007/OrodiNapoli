@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ordem">
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="423dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginBottom="1dp"
+        android:background="#CCD0CB"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btfinal">
+
+        <ImageView
+            android:id="@+id/btcardapio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/btcardapio" />
+
+        <ImageView
+            android:id="@+id/bthome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/bthome" />
+
+        <ImageView
+            android:id="@+id/btconfig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/btperfil" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/toplogin1"
+        android:layout_width="423dp"
+        android:layout_height="91dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/logologin1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#AA2C19"
+            android:src="@drawable/logo" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/fotopizzatv"
+        android:layout_width="262dp"
+        android:layout_height="205dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pizzatv"
+        app:srcCompat="@drawable/mozzaordem" />
+
+    <TextView
+        android:id="@+id/pizzatv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:fontFamily="@font/playball"
+        android:text="TextView"
+        android:textColor="#1F750A"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toplogin1" />
+
+    <Button
+        android:id="@+id/btfinal"
+        android:layout_width="170dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#902222"
+        android:text="Finalizar Pedido"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="409dp"
+        android:layout_height="264dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fotopizzatv">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/playfair_variable"
+            android:gravity="center"
+            android:text="Adicionais"
+            android:textColor="#902222"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/cbq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Queijo" />
+
+        <CheckBox
+            android:id="@+id/cbc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cebola"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <CheckBox
+            android:id="@+id/cba"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Azeitona" />
+
+        <CheckBox
+            android:id="@+id/cbca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Catupiry" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
