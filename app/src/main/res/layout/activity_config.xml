@@ -7,4 +7,58 @@
     android:layout_height="match_parent"
     tools:context=".config">
 
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="423dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="127dp"
+        android:layout_marginBottom="1dp"
+        android:background="#CCD0CB"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/piztradtv">
+
+        <ImageView
+            android:id="@+id/btcardapio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/btcardapio" />
+
+        <ImageView
+            android:id="@+id/bthome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/bthome" />
+
+        <ImageView
+            android:id="@+id/btconfig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/btperfil" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/toplogin1"
+        android:layout_width="423dp"
+        android:layout_height="91dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/logologin1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#AA2C19"
+            android:src="@drawable/logo" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

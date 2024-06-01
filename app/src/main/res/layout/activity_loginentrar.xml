@@ -29,7 +29,7 @@
         android:id="@+id/cadastrartv"
         android:layout_width="261dp"
         android:layout_height="113dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="39dp"
         android:fontFamily="@font/playfair_variable"
         android:gravity="start"
         android:text="@string/entrartv"
@@ -37,7 +37,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.106"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toplogin1" />
+        app:layout_constraintTop_toBottomOf="@+id/btvoltar" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailinput"
@@ -46,9 +46,12 @@
         android:layout_marginStart="1dp"
         android:layout_marginTop="17dp"
         android:layout_marginEnd="1dp"
+        android:textColorHint="#000000"
         app:boxStrokeWidth="0dp"
         app:boxStrokeWidthFocused="0dp"
+        app:cursorColor="#000000"
         app:hintEnabled="true"
+        app:hintTextColor="#AA2C19"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailtv">
@@ -60,6 +63,7 @@
             android:layout_height="56dp"
             android:background="@drawable/fundoinput"
             android:hint="@string/emailinput"
+            android:textColor="#000000"
             android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -68,8 +72,11 @@
         android:layout_width="373dp"
         android:layout_height="65dp"
         android:layout_marginTop="13dp"
+        android:textColorHint="#000000"
         app:boxStrokeWidth="0dp"
         app:boxStrokeWidthFocused="0dp"
+        app:cursorColor="#000000"
+        app:hintTextColor="#AA2C19"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/senhatv"
@@ -80,6 +87,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/fundoinput"
             android:hint="@string/senhainput"
+            android:textColor="#000000"
             android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -90,6 +98,7 @@
         android:layout_marginTop="60dp"
         android:backgroundTint="#1F750A"
         android:text="@string/btentrar2"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -120,4 +129,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cadastrartv" />
+
+    <ImageView
+        android:id="@+id/btvoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="33dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toplogin1"
+        app:srcCompat="@drawable/voltar" />
 </androidx.constraintlayout.widget.ConstraintLayout>
