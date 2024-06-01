@@ -8,47 +8,9 @@
     tools:context=".cardapio">
 
     <LinearLayout
-        android:id="@+id/footer"
-        android:layout_width="423dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginBottom="1dp"
-        android:background="#CCD0CB"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inicial">
-
-        <ImageView
-            android:id="@+id/btcardapio"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/btcardapio" />
-
-        <ImageView
-            android:id="@+id/bthome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/bthome" />
-
-        <ImageView
-            android:id="@+id/btconfig"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/btperfil" />
-
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/topcardapio"
-        android:layout_width="409dp"
-        android:layout_height="324dp"
-        android:layout_marginTop="1dp"
+        android:layout_width="412dp"
+        android:layout_height="308dp"
         android:background="#aa2c19"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -84,8 +46,9 @@
         android:layout_width="409dp"
         android:layout_height="463dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/footer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -157,5 +120,42 @@
 
         </LinearLayout>
     </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="423dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="1dp"
+        android:background="#CCD0CB"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inicial">
+
+        <ImageView
+            android:id="@+id/btcardapio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/btcardapio" />
+
+        <ImageView
+            android:id="@+id/bthome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/bthome" />
+
+        <ImageView
+            android:id="@+id/btconfig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/btperfil" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

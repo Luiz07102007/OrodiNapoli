@@ -8,10 +8,20 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:screenOrientation="portrait"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OrodiNapoli"
         tools:targetApi="31">
+        <activity
+            android:name=".ordem"
+            android:exported="false" />
+        <activity
+            android:name=".config"
+            android:exported="false" />
+        <activity
+            android:name=".cardapiotrad"
+            android:exported="false" />
         <activity
             android:name=".cardapio"
             android:exported="false" />

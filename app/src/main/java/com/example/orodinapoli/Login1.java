@@ -22,28 +22,28 @@ public class Login1 extends AppCompatActivity {
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
         decorView.setSystemUiVisibility(uiOptions);
 
-                Button button = findViewById(R.id.bt_entrar);
-                button.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent intent = new Intent(Login1.this, Loginentrar.class);
-                        startActivity(intent);
-                        Button button = findViewById(R.id.bt_cadastrar);
-                        button.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                Intent intent = new Intent(Login1.this, Logincadastra.class);
-                                startActivity(intent);
-
-
-                        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-                            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-                            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-                            return insets;
-                        });
-                    }
-                });
+        Button buttonentrar = findViewById(R.id.bt_entrar);
+        buttonentrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Login1.this, Loginentrar.class);
+                startActivity(intent);
             }
+        });
+        Button buttoncadastrar = findViewById(R.id.bt_cadastrar);
+        buttoncadastrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Login1.this, Logincadastra.class);
+                startActivity(intent);
+            }
+        });
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
         });
     }
 }
+
