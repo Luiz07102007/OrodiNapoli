@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cardapiodoce">
+
+    <ImageView
+        android:id="@+id/btvoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toplogin1"
+        app:srcCompat="@drawable/voltar" />
+
+    <LinearLayout
+        android:id="@+id/toplogin1"
+        android:layout_width="423dp"
+        android:layout_height="91dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/logologin1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#AA2C19"
+            android:src="@drawable/logo" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="423dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="89dp"
+        android:layout_marginBottom="1dp"
+        android:background="#CCD0CB"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pizzadocetv">
+
+        <ImageView
+            android:id="@+id/btcardapio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/btcardapio" />
+
+        <ImageView
+            android:id="@+id/bthome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/bthome" />
+
+        <ImageView
+            android:id="@+id/btconfig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/btperfil" />
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/scrollcards"
+        android:layout_width="409dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pizzadoceiv">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/brigacard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                app:srcCompat="@drawable/cardbrigadeiro" />
+
+            <ImageView
+                android:id="@+id/chococard"
+                android:layout_width="match_parent"
+                android:layout_marginRight="30dp"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/cardchocolate" />
+
+            <ImageView
+                android:id="@+id/nutelcard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="30dp"
+                app:srcCompat="@drawable/cardnutella" />
+
+            <ImageView
+                android:id="@+id/banancard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="30dp"
+                app:srcCompat="@drawable/cardbanana" />
+
+            <ImageView
+                android:id="@+id/churrcard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="30dp"
+                app:srcCompat="@drawable/cardchurros" />
+
+            <ImageView
+                android:id="@+id/cbrancard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="30dp"
+                app:srcCompat="@drawable/cardcbranco" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <ImageView
+        android:id="@+id/pizzadoceiv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toplogin1"
+        app:srcCompat="@drawable/pizzasdoces" />
+
+    <TextView
+        android:id="@+id/pizzadocetv"
+        android:layout_width="264dp"
+        android:layout_height="196dp"
+        android:layout_marginTop="96dp"
+        android:fontFamily="@font/raleway_medium"
+        android:gravity="center"
+        android:text="@string/docestv"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollcards" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
