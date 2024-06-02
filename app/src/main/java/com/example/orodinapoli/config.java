@@ -17,7 +17,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class config extends AppCompatActivity {
+public class  config extends AppCompatActivity {
     RadioGroup radio_group;
     RadioButton claro;
     RadioButton escuro;
@@ -27,6 +27,7 @@ public class config extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_config);
 
+        radio_group = findViewById(R.id.rgtema);
         claro = findViewById(R.id.rbmodoclaro);
         escuro = findViewById(R.id.rbmodoescuro);
 

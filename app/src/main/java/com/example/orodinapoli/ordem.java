@@ -93,26 +93,50 @@ public class ordem extends AppCompatActivity implements
             case 13:
                 img.setImageResource(R.drawable.brigaordem);
                 texto1.setText(R.string.o13);
+                cb1.setText("Nutella");
+                cb2.setText("Bombons");
+                cb3.setText("Leite Condensado");
+                cb4.setText("Creme de Leite");
                 break;
             case 14:
                 img.setImageResource(R.drawable.chocomoordem);
                 texto1.setText(R.string.o14);
+                cb1.setText("Nutella");
+                cb2.setText("Bombons");
+                cb3.setText("Leite Condensado");
+                cb4.setText("Creme de Leite");
                 break;
             case 15:
                 img.setImageResource(R.drawable.nutelaordem);
                 texto1.setText(R.string.o15);
+                cb1.setText("Nutella");
+                cb2.setText("Bombons");
+                cb3.setText("Leite Condensado");
+                cb4.setText("Creme de Leite");
                 break;
             case 16:
                 img.setImageResource(R.drawable.bananaordem);
                 texto1.setText(R.string.o16);
+                cb1.setText("Nutella");
+                cb2.setText("Bombons");
+                cb3.setText("Leite Condensado");
+                cb4.setText("Creme de Leite");
                 break;
             case 17:
                 img.setImageResource(R.drawable.churrosordem);
                 texto1.setText(R.string.o17);
+                cb1.setText("Nutella");
+                cb2.setText("Bombons");
+                cb3.setText("Leite Condensado");
+                cb4.setText("Creme de Leite");
                 break;
             case 18:
                 img.setImageResource(R.drawable.chocobrancordem);
                 texto1.setText(R.string.o18);
+                cb1.setText("Nutella");
+                cb2.setText("Bombons");
+                cb3.setText("Leite Condensado");
+                cb4.setText("Creme de Leite");
                 break;
             case 19:
                 img.setImageResource(R.drawable.sucosordem);
