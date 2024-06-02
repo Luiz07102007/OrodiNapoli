@@ -2,15 +2,20 @@ package com.example.orodinapoli;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.google.android.material.textfield.TextInputEditText;
 
 public class Logincadastra extends AppCompatActivity {
 
@@ -19,21 +24,45 @@ public class Logincadastra extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_logincadastra);
-
         ImageView backButton = findViewById(R.id.btvoltar);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Voltar à atividade anterior
                 onBackPressed();
             }
         });
+
+        TextInputEditText inputEmail = findViewById(R.id.tietemail);
         Button button = findViewById(R.id.btcadastrar);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Logincadastra.this, Logincadastra2.class);
-                startActivity(intent);
+                String email = inputEmail.getText().toString();
+
+                if (email.isEmpty()) {
+                    Toast.makeText(Logincadastra.this, "Por favor, insira um email.", Toast.LENGTH_SHORT).show();
+                } else {
+                    AlertDialog.Builder alerta = new AlertDialog.Builder(Logincadastra.this);
+                    alerta.setTitle("Bem vindo, um código foi enviado para o email:");
+                    alerta.setMessage(email);
+                    alerta.setNegativeButton("OK", (dialog, which) -> {
+                        Intent intent = new Intent(Logincadastra.this, Logincadastra2.class);
+                        startActivity(intent);
+                    });
+                    AlertDialog alertDialog = alerta.create();
+                    alertDialog.show();
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            if (alertDialog.isShowing()) {
+                                alertDialog.dismiss();
+                                Intent intent = new Intent(Logincadastra.this, Logincadastra2.class);
+                                startActivity(intent);
+                            }
+                        }
+                    }, 99999);
+                }
             }
         });
 
