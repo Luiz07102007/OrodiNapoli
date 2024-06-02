@@ -8,43 +8,6 @@
     tools:context=".config">
 
     <LinearLayout
-        android:id="@+id/footer"
-        android:layout_width="423dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="127dp"
-        android:layout_marginBottom="1dp"
-        android:background="#CCD0CB"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/piztradtv">
-
-        <ImageView
-            android:id="@+id/btcardapio"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/btcardapio" />
-
-        <ImageView
-            android:id="@+id/bthome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/bthome" />
-
-        <ImageView
-            android:id="@+id/btconfig"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/btperfil" />
-
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/toplogin1"
         android:layout_width="423dp"
         android:layout_height="91dp"
@@ -61,4 +24,72 @@
             android:background="#AA2C19"
             android:src="@drawable/logo" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/configtv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:fontFamily="@font/playfair_variable"
+        android:text="Configurações"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toplogin1" />
+
+    <RadioGroup
+        android:id="@+id/rgtema"
+        android:layout_width="251dp"
+        android:layout_height="184dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/configtv">
+
+        <TextView
+            android:id="@+id/tematv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="Temas" />
+
+        <RadioButton
+            android:id="@+id/rbmodoclaro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="Claro" />
+
+        <RadioButton
+            android:id="@+id/rbmodoescuro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="Escuro" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/versaotv"
+        android:layout_width="135dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="29dp"
+        android:fontFamily="@font/open_sans"
+        android:gravity="center"
+        android:text="versão do aplicativo 1.0.0v"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bttelainicial" />
+
+    <Button
+        android:id="@+id/bttelainicial"
+        android:layout_width="126dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="354dp"
+        android:backgroundTint="#AA2C19"
+        android:text="Tela Inicial"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgtema" />
 </androidx.constraintlayout.widget.ConstraintLayout>

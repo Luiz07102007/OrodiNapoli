@@ -69,7 +69,14 @@ public class ordem extends AppCompatActivity implements
 
         }
 
-
+        ImageView backButton = findViewById(R.id.btvoltar);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Voltar à atividade anterior
+                onBackPressed();
+            }
+        });
 
 
 
