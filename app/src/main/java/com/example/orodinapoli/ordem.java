@@ -47,26 +47,113 @@ public class ordem extends AppCompatActivity implements
                 texto1.setText(R.string.o1);
             break;
             case 2:
-                img.setImageResource(R.drawable.cardmargherita);
+                img.setImageResource(R.drawable.margordem);
                 texto1.setText(R.string.o2);
                 break;
             case 3:
-                img.setImageResource(R.drawable.cardnapolitana);
+                img.setImageResource(R.drawable.napoordem);
                 texto1.setText(R.string.o3);
                 break;
             case 4:
-                img.setImageResource(R.drawable.cardmarnara);
+                img.setImageResource(R.drawable.mariordem);
                 texto1.setText(R.string.o4);
                 break;
             case 5:
-                img.setImageResource(R.drawable.carddiavola);
+                img.setImageResource(R.drawable.diavoordem);
                 texto1.setText(R.string.o5);
                 break;
             case 6:
-                img.setImageResource(R.drawable.cardpepperoni);
+                img.setImageResource(R.drawable.peppeordem);
                 texto1.setText(R.string.o6);
                 break;
-
+            case 7:
+                img.setImageResource(R.drawable.parmaordem);
+                texto1.setText(R.string.o7);
+                break;
+            case 8:
+                img.setImageResource(R.drawable.champordem);
+                texto1.setText(R.string.o8);
+                break;
+            case 9:
+                img.setImageResource(R.drawable.carboordem);
+                texto1.setText(R.string.o9);
+                break;
+            case 10:
+                img.setImageResource(R.drawable.camaordem);
+                texto1.setText(R.string.o10);
+                break;
+            case 11:
+                img.setImageResource(R.drawable.zucciordem);
+                texto1.setText(R.string.o11);
+                break;
+            case 12:
+                img.setImageResource(R.drawable.capreordem);
+                texto1.setText(R.string.o12);
+                break;
+            case 13:
+                img.setImageResource(R.drawable.brigaordem);
+                texto1.setText(R.string.o13);
+                break;
+            case 14:
+                img.setImageResource(R.drawable.chocomoordem);
+                texto1.setText(R.string.o14);
+                break;
+            case 15:
+                img.setImageResource(R.drawable.nutelaordem);
+                texto1.setText(R.string.o15);
+                break;
+            case 16:
+                img.setImageResource(R.drawable.bananaordem);
+                texto1.setText(R.string.o16);
+                break;
+            case 17:
+                img.setImageResource(R.drawable.churrosordem);
+                texto1.setText(R.string.o17);
+                break;
+            case 18:
+                img.setImageResource(R.drawable.chocobrancordem);
+                texto1.setText(R.string.o18);
+                break;
+            case 19:
+                img.setImageResource(R.drawable.sucosordem);
+                texto1.setText(R.string.o19);
+                cb1.setText("Gelo");
+                cb2.setText("Limão");
+                cb3.setText("Gelo de coco");
+                cb4.setText("Limão verde");
+                break;
+            case 20:
+                img.setImageResource(R.drawable.refriordem);
+                texto1.setText(R.string.o20);
+                cb1.setText("Gelo");
+                cb2.setText("Limão");
+                cb3.setText("Gelo de coco");
+                cb4.setText("Limão verde");
+                break;
+            case 21:
+                img.setImageResource(R.drawable.aguaordem);
+                texto1.setText(R.string.o21);
+                cb1.setText("Gelo");
+                cb2.setText("Limão");
+                cb3.setText("Gelo de coco");
+                cb4.setText("Limão verde");
+                break;
+            case 22:
+                img.setImageResource(R.drawable.vinhoordem);
+                texto1.setText(R.string.o22);
+                cb1.setText("Gelo");
+                cb2.setText("Limão");
+                cb3.setText("Gelo de coco");
+                cb4.setText("Limão verde");
+                break;
+            case 23:
+                img.setImageResource(R.drawable.espumordem);
+                texto1.setText(R.string.o23);
+                cb1.setText("Gelo");
+                cb2.setText("Limão");
+                cb3.setText("Gelo de coco");
+                cb4.setText("Limão verde");
+                break;
         }
 
         ImageView backButton = findViewById(R.id.btvoltar);
@@ -119,16 +206,17 @@ public class ordem extends AppCompatActivity implements
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.btfinal) {
-            String txt = "Sua pizza será entregue com os seguintes adicionais:\n\n";
-            txt += cb1.isChecked() ? "Queijo\n" : "";
-            txt += cb2.isChecked() ? "Cebola\n" : "";
-            txt += cb3.isChecked() ? "Azeitona\n" : "";
-            txt += cb4.isChecked() ? "Catupiry\n" : "";
+            String txt = "Seu pedido será entregue com os seguintes adicionais:\n\n";
+            txt += cb1.isChecked() ? cb1.getText().toString() + "\n" : "";
+            txt += cb2.isChecked() ? cb2.getText().toString() + "\n" : "";
+            txt += cb3.isChecked() ? cb3.getText().toString() + "\n" : "";
+            txt += cb4.isChecked() ? cb4.getText().toString() + "\n" : "";
             AlertDialog.Builder dlg = new AlertDialog.Builder(this);
             dlg.setMessage(txt);
             dlg.setPositiveButton("OK", null);
             dlg.show();
         }
+
     }
 
     @Override

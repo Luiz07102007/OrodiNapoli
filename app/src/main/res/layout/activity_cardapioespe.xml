@@ -5,14 +5,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".cardapiotrad">
+    tools:context=".cardapioespe">
 
     <ImageView
         android:id="@+id/btvoltar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toplogin1"
         app:srcCompat="@drawable/voltar" />
@@ -39,7 +39,7 @@
         android:id="@+id/footer"
         android:layout_width="423dp"
         android:layout_height="100dp"
-        android:layout_marginTop="127dp"
+        android:layout_marginTop="89dp"
         android:layout_marginBottom="1dp"
         android:background="#CCD0CB"
         android:gravity="center"
@@ -47,7 +47,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/piztradtv">
+        app:layout_constraintTop_toBottomOf="@+id/pizzaespetv">
 
         <ImageView
             android:id="@+id/btcardapio"
@@ -72,39 +72,16 @@
 
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/piztradiv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toplogin1"
-        app:srcCompat="@drawable/pizzastradicionais" />
-
-    <TextView
-        android:id="@+id/piztradtv"
-        android:layout_width="251dp"
-        android:layout_height="145dp"
-        android:layout_marginTop="103dp"
-        android:fontFamily="@font/raleway_medium"
-        android:gravity="center"
-        android:text="@string/tradicionaistv"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollcards" />
-
     <HorizontalScrollView
         android:id="@+id/scrollcards"
         android:layout_width="409dp"
         android:layout_height="180dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="35dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/piztradiv">
+        app:layout_constraintTop_toBottomOf="@+id/pizzaespeiv">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -112,48 +89,79 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/mozzacard"
-                android:layout_width="match_parent"
+                android:id="@+id/parmacard"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                app:srcCompat="@drawable/cardmozzarella" />
+                android:layout_weight="1"
+                app:srcCompat="@drawable/cardparma" />
 
             <ImageView
-                android:id="@+id/marghcard"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="30dp"
-                app:srcCompat="@drawable/cardmargherita" />
-
-            <ImageView
-                android:id="@+id/napolcard"
+                android:id="@+id/champcard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="30dp"
-                app:srcCompat="@drawable/cardnapolitana" />
+                android:layout_weight="1"
+                app:srcCompat="@drawable/cardchampignon" />
 
             <ImageView
-                android:id="@+id/marincard"
+                android:id="@+id/carbocard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:layout_marginRight="30dp"
-                app:srcCompat="@drawable/cardmarnara" />
+                app:srcCompat="@drawable/cardcarbonara" />
 
             <ImageView
-                android:id="@+id/diavolacard"
+                android:id="@+id/camarcard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:layout_marginRight="30dp"
-                app:srcCompat="@drawable/carddiavola" />
+                app:srcCompat="@drawable/cardcamarao" />
 
             <ImageView
-                android:id="@+id/peppecard"
+                android:id="@+id/zuccicard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:layout_marginRight="30dp"
-                app:srcCompat="@drawable/cardpepperoni" />
+                app:srcCompat="@drawable/cardzuccini" />
+
+            <ImageView
+                android:id="@+id/caprecard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="30dp"
+                app:srcCompat="@drawable/cardcaprese" />
 
         </LinearLayout>
     </HorizontalScrollView>
+
+    <ImageView
+        android:id="@+id/pizzaespeiv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.612"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toplogin1"
+        app:srcCompat="@drawable/pizzasespeciais" />
+
+    <TextView
+        android:id="@+id/pizzaespetv"
+        android:layout_width="264dp"
+        android:layout_height="196dp"
+        android:layout_marginTop="90dp"
+        android:fontFamily="@font/raleway_medium"
+        android:gravity="center"
+        android:text="@string/especiaistv"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollcards" />
 </androidx.constraintlayout.widget.ConstraintLayout>

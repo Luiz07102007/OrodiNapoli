@@ -38,6 +38,30 @@ public class cardapio extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        ImageView pizzaesp = findViewById(R.id.pizzasesp);
+        pizzaesp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(cardapio.this, cardapioespe.class);
+                startActivity(intent);
+            }
+        });
+        ImageView pizzadoce = findViewById(R.id.pizzasdoces);
+        pizzadoce.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(cardapio.this, cardapiodoce.class);
+                startActivity(intent);
+            }
+        });
+        ImageView bebidas = findViewById(R.id.bebidas);
+        bebidas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(cardapio.this, cardapiobebidas.class);
+                startActivity(intent);
+            }
+        });
         ImageView btconfig = findViewById(R.id.btconfig);
         btconfig.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -16,17 +16,32 @@
     <string name="promotv"><font color="#1F750A">Promoções</font> do chef</string>
     <string name="cardapiotv"> <b>Confira nosso saboroso cardápio que atendem os mais diversos gostos!</b></string>
     <string name="tradicionaistv">Descubra o <font color="#AA2C19">sabor</font> da <font color="#1F750A">Itália</font> através das nossas saborosas <font color="#1F750A">pizzas</font> <font color="#AA2C19">tradicionais</font></string>
+    <string name="especiaistv">Descubra o <font color="#AA2C19">sabor</font> da <font color="#1F750A">Itália</font> através das nossas saborosas <font color="#1F750A">pizzas</font> <font color="#AA2C19">especiais</font></string>
+    <string name="docestv">Descubra o <font color="#AA2C19">sabor</font> da <font color="#1F750A">Itália</font> através das nossas saborosas <font color="#1F750A">pizzas</font> <font color="#AA2C19">doces</font></string>
+    <string name="bebidastv">Descubra o <font color="#AA2C19">sabor</font> do <font color="#1F750A">Luxo</font> através das nossas saborosas <font color="#1F750A">bebidas</font></string>
     <string name="o1">Mozzarella</string>
     <string name="o2">Margherita</string>
     <string name="o3">Napolitana</string>
     <string name="o4">Marinara</string>
     <string name="o5">Diavola</string>
     <string name="o6">Pepperoni</string>
-
-
-
-
-
+    <string name="o7">Parma e bife</string>
+    <string name="o8">Champignon</string>
+    <string name="o9">Carbonara</string>
+    <string name="o10">Camarão</string>
+    <string name="o11">Zuccini</string>
+    <string name="o12">Caprese</string>
+    <string name="o13">Brigadeiro</string>
+    <string name="o14">Choco c/morango</string>
+    <string name="o15">Nutella</string>
+    <string name="o16">Banana Nevada</string>
+    <string name="o17">Churros</string>
+    <string name="o18">Choco B c/nozes</string>
+    <string name="o19">Sucos Naturais</string>
+    <string name="o20">Refrigerante</string>
+    <string name="o21">Água com gás</string>
+    <string name="o22">Vinho</string>
+    <string name="o23">Chá Gelado</string>
 
 
 
