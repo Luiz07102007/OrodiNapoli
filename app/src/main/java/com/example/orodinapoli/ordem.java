@@ -25,6 +25,9 @@ public class ordem extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_ordem);
+        View decorView = getWindow().getDecorView();
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
+        decorView.setSystemUiVisibility(uiOptions);
         cb1 = (CheckBox) findViewById(R.id.cbq);
         cb2 = (CheckBox) findViewById(R.id.cbc);
         cb3 = (CheckBox) findViewById(R.id.cba);
