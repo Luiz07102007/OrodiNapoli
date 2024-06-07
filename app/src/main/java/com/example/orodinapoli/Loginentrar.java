@@ -76,12 +76,12 @@ public class Loginentrar extends AppCompatActivity {
         });
 
         AlertDialog alertDialog = alerta.create();
-        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#CCD0CB"))); // Cor de fundo
+        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#a9a9a9")));
         alertDialog.setOnShowListener(new DialogInterface.OnShowListener() {
             @Override
             public void onShow(DialogInterface dialog) {
                 Button positiveButton = alertDialog.getButton(AlertDialog.BUTTON_POSITIVE);
-                positiveButton.setTextColor(Color.parseColor("#AA2C19")); // Cor do texto do botão
+                positiveButton.setTextColor(Color.parseColor("#AA2C19")); //
             }
         });
 

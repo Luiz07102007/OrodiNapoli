@@ -246,29 +246,26 @@ public class ordem extends AppCompatActivity implements
             dlgBuilder.setMessage(txt);
             dlgBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
-                    // Código a ser executado quando o botão "OK" é clicado
                 }
             });
 
-            // Customização adicional
-            dlgBuilder.setIcon(R.drawable.iconentrega); // Ícone de informação
-            dlgBuilder.setCancelable(false); // Impede que o diálogo seja fechado ao tocar fora dele
+            dlgBuilder.setIcon(R.drawable.iconentrega);
+            dlgBuilder.setCancelable(false);
 
-            // Personalização do texto e do fundo do botão "OK"
             dlgBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
-                    // Código a ser executado quando o botão "OK" é clicado
+
                 }
             });
             AlertDialog alertDialog = dlgBuilder.create();
 
             // Personalização do layout e das cores do AlertDialog
-            alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#CCD0CB"))); // Cor de fundo
+            alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#a9a9a9")));
             alertDialog.setOnShowListener(new DialogInterface.OnShowListener() {
                 @Override
                 public void onShow(DialogInterface dialog) {
                     Button positiveButton = alertDialog.getButton(AlertDialog.BUTTON_POSITIVE);
-                    positiveButton.setTextColor(Color.parseColor("#FF0000")); // Cor do texto do botão
+                    positiveButton.setTextColor(Color.parseColor("#FF0000"));
                 }
             });
 
@@ -278,6 +275,6 @@ public class ordem extends AppCompatActivity implements
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-        // Código para lidar com mudanças nos checkboxes
+
     }
 }

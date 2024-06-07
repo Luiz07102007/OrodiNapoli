@@ -55,7 +55,7 @@ public class Logincadastra extends AppCompatActivity {
                         startActivity(intent);
                     });
                     AlertDialog alertDialog = alerta.create();
-                    alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#CCD0CB"))); // Cor de fundo
+                    alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#a9a9a9")));
                     alertDialog.setOnShowListener(new DialogInterface.OnShowListener() {
                         @Override
                         public void onShow(DialogInterface dialog) {
