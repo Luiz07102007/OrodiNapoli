@@ -8,7 +8,9 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.content.DialogInterface;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,9 +27,6 @@ public class ordem extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_ordem);
-        View decorView = getWindow().getDecorView();
-        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
-        decorView.setSystemUiVisibility(uiOptions);
         cb1 = (CheckBox) findViewById(R.id.cbq);
         cb2 = (CheckBox) findViewById(R.id.cbc);
         cb3 = (CheckBox) findViewById(R.id.cba);
@@ -48,7 +47,7 @@ public class ordem extends AppCompatActivity implements
             case 1:
                 img.setImageResource(R.drawable.mozzaordem);
                 texto1.setText(R.string.o1);
-            break;
+                break;
             case 2:
                 img.setImageResource(R.drawable.margordem);
                 texto1.setText(R.string.o2);
@@ -97,41 +96,40 @@ public class ordem extends AppCompatActivity implements
                 img.setImageResource(R.drawable.brigaordem);
                 texto1.setText(R.string.o13);
                 cb1.setText("Nutella");
-                cb2.setText("Bombons");
-                cb3.setText("Leite Condensado");
-                cb4.setText("Creme de Leite");
+                cb2.setText("Kinder ovo");
+                cb3.setText("Granulado");
+                cb4.setText("M&M");
                 break;
             case 14:
                 img.setImageResource(R.drawable.chocomoordem);
                 texto1.setText(R.string.o14);
                 cb1.setText("Nutella");
-                cb2.setText("Bombons");
-                cb3.setText("Leite Condensado");
-                cb4.setText("Creme de Leite");
+                cb2.setText("Kinder ovo");
+                cb3.setText("Granulado");
+                cb4.setText("M&M");
                 break;
             case 15:
                 img.setImageResource(R.drawable.nutelaordem);
                 texto1.setText(R.string.o15);
                 cb1.setText("Nutella");
-                cb2.setText("Bombons");
-                cb3.setText("Leite Condensado");
-                cb4.setText("Creme de Leite");
+                cb2.setText("Kinder ovo");
+                cb3.setText("Granulado");
+                cb4.setText("M&M");
                 break;
             case 16:
                 img.setImageResource(R.drawable.bananaordem);
                 texto1.setText(R.string.o16);
                 cb1.setText("Nutella");
-                cb2.setText("Bombons");
-                cb3.setText("Leite Condensado");
-                cb4.setText("Creme de Leite");
-                break;
+                cb2.setText("Kinder ovo");
+                cb3.setText("Granulado");
+                cb4.setText("M&M");
             case 17:
                 img.setImageResource(R.drawable.churrosordem);
                 texto1.setText(R.string.o17);
                 cb1.setText("Nutella");
-                cb2.setText("Bombons");
-                cb3.setText("Leite Condensado");
-                cb4.setText("Creme de Leite");
+                cb2.setText("Kinder ovo");
+                cb3.setText("Granulado");
+                cb4.setText("M&M");
                 break;
             case 18:
                 img.setImageResource(R.drawable.chocobrancordem);
@@ -147,7 +145,7 @@ public class ordem extends AppCompatActivity implements
                 cb1.setText("Gelo");
                 cb2.setText("Limão");
                 cb3.setText("Gelo de coco");
-                cb4.setText("Limão verde");
+                cb4.setText("Hortelã");
                 break;
             case 20:
                 img.setImageResource(R.drawable.refriordem);
@@ -155,7 +153,7 @@ public class ordem extends AppCompatActivity implements
                 cb1.setText("Gelo");
                 cb2.setText("Limão");
                 cb3.setText("Gelo de coco");
-                cb4.setText("Limão verde");
+                cb4.setText("Hortelã");
                 break;
             case 21:
                 img.setImageResource(R.drawable.aguaordem);
@@ -163,7 +161,7 @@ public class ordem extends AppCompatActivity implements
                 cb1.setText("Gelo");
                 cb2.setText("Limão");
                 cb3.setText("Gelo de coco");
-                cb4.setText("Limão verde");
+                cb4.setText("Hortelã");
                 break;
             case 22:
                 img.setImageResource(R.drawable.vinhoordem);
@@ -171,7 +169,7 @@ public class ordem extends AppCompatActivity implements
                 cb1.setText("Gelo");
                 cb2.setText("Limão");
                 cb3.setText("Gelo de coco");
-                cb4.setText("Limão verde");
+                cb4.setText("Hortelã");
                 break;
             case 23:
                 img.setImageResource(R.drawable.espumordem);
@@ -179,7 +177,7 @@ public class ordem extends AppCompatActivity implements
                 cb1.setText("Gelo");
                 cb2.setText("Limão");
                 cb3.setText("Gelo de coco");
-                cb4.setText("Limão verde");
+                cb4.setText("Hortelã");
                 break;
         }
 
@@ -238,16 +236,48 @@ public class ordem extends AppCompatActivity implements
             txt += cb2.isChecked() ? cb2.getText().toString() + "\n" : "";
             txt += cb3.isChecked() ? cb3.getText().toString() + "\n" : "";
             txt += cb4.isChecked() ? cb4.getText().toString() + "\n" : "";
-            AlertDialog.Builder dlg = new AlertDialog.Builder(this);
-            dlg.setMessage(txt);
-            dlg.setPositiveButton("OK", null);
-            dlg.show();
-        }
 
+            if (!cb1.isChecked() && !cb2.isChecked() && !cb3.isChecked() && !cb4.isChecked()) {
+                txt = "Nenhum adicional foi selecionado.";
+            }
+
+            AlertDialog.Builder dlgBuilder = new AlertDialog.Builder(view.getContext()); // Passando o estilo customizado
+            dlgBuilder.setTitle("Pedido");
+            dlgBuilder.setMessage(txt);
+            dlgBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    // Código a ser executado quando o botão "OK" é clicado
+                }
+            });
+
+            // Customização adicional
+            dlgBuilder.setIcon(R.drawable.iconentrega); // Ícone de informação
+            dlgBuilder.setCancelable(false); // Impede que o diálogo seja fechado ao tocar fora dele
+
+            // Personalização do texto e do fundo do botão "OK"
+            dlgBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    // Código a ser executado quando o botão "OK" é clicado
+                }
+            });
+            AlertDialog alertDialog = dlgBuilder.create();
+
+            // Personalização do layout e das cores do AlertDialog
+            alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#CCD0CB"))); // Cor de fundo
+            alertDialog.setOnShowListener(new DialogInterface.OnShowListener() {
+                @Override
+                public void onShow(DialogInterface dialog) {
+                    Button positiveButton = alertDialog.getButton(AlertDialog.BUTTON_POSITIVE);
+                    positiveButton.setTextColor(Color.parseColor("#FF0000")); // Cor do texto do botão
+                }
+            });
+
+            alertDialog.show();
+        }
     }
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
+        // Código para lidar com mudanças nos checkboxes
     }
 }

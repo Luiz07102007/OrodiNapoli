@@ -1,6 +1,9 @@
 package com.example.orodinapoli;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -45,11 +48,22 @@ public class Logincadastra extends AppCompatActivity {
                     AlertDialog.Builder alerta = new AlertDialog.Builder(Logincadastra.this);
                     alerta.setTitle("Bem vindo, um código foi enviado para o email:");
                     alerta.setMessage(email);
+                    alerta.setIcon(R.drawable.baseline_arrow_right_alt_24);
+                    alerta.setCancelable(false);
                     alerta.setNegativeButton("OK", (dialog, which) -> {
                         Intent intent = new Intent(Logincadastra.this, Logincadastra2.class);
                         startActivity(intent);
                     });
                     AlertDialog alertDialog = alerta.create();
+                    alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#CCD0CB"))); // Cor de fundo
+                    alertDialog.setOnShowListener(new DialogInterface.OnShowListener() {
+                        @Override
+                        public void onShow(DialogInterface dialog) {
+                            Button negativeButton = alertDialog.getButton(AlertDialog.BUTTON_NEGATIVE);
+                            negativeButton.setTextColor(Color.parseColor("#AA2C19"));
+                        }
+                    });
+
                     alertDialog.show();
 
                     new Handler().postDelayed(new Runnable() {

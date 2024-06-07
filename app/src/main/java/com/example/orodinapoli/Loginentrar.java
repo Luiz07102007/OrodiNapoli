@@ -1,6 +1,8 @@
 package com.example.orodinapoli;
-
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -41,28 +43,9 @@ public class Loginentrar extends AppCompatActivity {
                 String email = inputEmail.getText().toString();
 
                 if (email.isEmpty()) {
-                    Toast.makeText(Loginentrar.this, "Por favor, insira um email.", Toast.LENGTH_SHORT).show();
+                    showCustomToast("Por favor, insira um email.");
                 } else {
-                    AlertDialog.Builder alerta = new AlertDialog.Builder(Loginentrar.this);
-                    alerta.setTitle("Bem vindo, um código foi enviado para o email:");
-                    alerta.setMessage(email);
-                    alerta.setNegativeButton("OK", (dialog, which) -> {
-                        Intent intent = new Intent(Loginentrar.this, Loginentrar2.class);
-                        startActivity(intent);
-                    });
-                    AlertDialog alertDialog = alerta.create();
-                    alertDialog.show();
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            if (alertDialog.isShowing()) {
-                                alertDialog.dismiss();
-                                Intent intent = new Intent(Loginentrar.this, Loginentrar2.class);
-                                startActivity(intent);
-                            }
-                        }
-                    }, 99999);
+                    showAlertDialog(email);
                 }
             }
         });
@@ -72,5 +55,47 @@ public class Loginentrar extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    private void showCustomToast(String message) {
+        Toast.makeText(Loginentrar.this, message, Toast.LENGTH_SHORT).show();
+
+    }
+
+    private void showAlertDialog(String email) {
+        AlertDialog.Builder alerta = new AlertDialog.Builder(Loginentrar.this);
+        alerta.setTitle("Bem vindo, um código foi enviado para o email:");
+        alerta.setMessage(email);
+        alerta.setIcon(R.drawable.baseline_arrow_right_alt_24);
+        alerta.setCancelable(false);
+        alerta.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent = new Intent(Loginentrar.this, Loginentrar2.class);
+                startActivity(intent);
+            }
+        });
+
+        AlertDialog alertDialog = alerta.create();
+        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#CCD0CB"))); // Cor de fundo
+        alertDialog.setOnShowListener(new DialogInterface.OnShowListener() {
+            @Override
+            public void onShow(DialogInterface dialog) {
+                Button positiveButton = alertDialog.getButton(AlertDialog.BUTTON_POSITIVE);
+                positiveButton.setTextColor(Color.parseColor("#AA2C19")); // Cor do texto do botão
+            }
+        });
+
+        alertDialog.show();
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if (alertDialog.isShowing()) {
+                    alertDialog.dismiss();
+                    Intent intent = new Intent(Loginentrar.this, Loginentrar2.class);
+                    startActivity(intent);
+                }
+            }
+        }, 99999);
     }
 }
